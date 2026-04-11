@@ -45,6 +45,9 @@ The system follows a modular pipeline:
 * Port-sensitive risk adjustment
 * Deterministic and reproducible scoring logic
 
+* <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/7f974c1f-6c67-46b9-94b6-2f57dba533bd" />
+
+
 ---
 
 ### **2. Explainability by Design**
