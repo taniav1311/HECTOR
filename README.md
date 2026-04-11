@@ -33,7 +33,7 @@ This approach ensures that the system:
 ## **System Architecture**
 
 The system follows a modular pipeline:
-<img width="1016" height="474" alt="image" src="https://github.com/user-attachments/assets/88a07cab-f7da-4994-b593-e5c50f518053" />
+<img width="750" height="350" alt="image" src="https://github.com/user-attachments/assets/88a07cab-f7da-4994-b593-e5c50f518053" />
 
 ---
 
