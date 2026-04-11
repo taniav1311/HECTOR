@@ -1,0 +1,52 @@
+[
+  {
+    "service": "ftp",
+    "risk_level": "high",
+    "description": "FTP transmits credentials and data in plaintext, making it vulnerable to interception and credential theft"
+  },
+  {
+    "service": "telnet",
+    "risk_level": "critical",
+    "description": "Telnet provides unencrypted remote access, exposing all session data including passwords to network eavesdropping"
+  },
+  {
+    "service": "smb",
+    "risk_level": "critical",
+    "description": "SMB has a history of critical remote code execution vulnerabilities and should not be exposed publicly"
+  },
+  {
+    "service": "http",
+    "risk_level": "medium",
+    "description": "Unencrypted HTTP exposes web traffic to interception and man-in-the-middle attacks"
+  },
+  {
+    "service": "https",
+    "risk_level": "low",
+    "description": "HTTPS is generally secure but misconfigured TLS or outdated certificates can introduce risk"
+  },
+  {
+    "service": "ssh",
+    "risk_level": "medium",
+    "description": "SSH is relatively secure but weak credentials or outdated versions can allow unauthorized remote access"
+  },
+  {
+    "service": "rdp",
+    "risk_level": "critical",
+    "description": "RDP exposed to the network is a common attack vector for brute force and remote exploitation"
+  },
+  {
+    "service": "mysql",
+    "risk_level": "high",
+    "description": "Exposing MySQL publicly risks unauthorized database access and potential data exfiltration"
+  },
+  {
+    "service": "dns",
+    "risk_level": "medium",
+    "description": "Open DNS resolvers can be abused for amplification attacks and DNS cache poisoning"
+  },
+  {
+    "service": "smtp",
+    "risk_level": "medium",
+    "description": "Open or misconfigured SMTP servers can be exploited as spam relays or for user enumeration"
+  }
+]

@@ -1,0 +1,249 @@
+{
+  "127.0.0.1": {
+    "favourite": true,
+    "scans": [
+      {
+        "timestamp": "2026-04-09T18:32:23+00:00",
+        "ports": [
+          {
+            "port": 3306,
+            "risk": 3
+          },
+          {
+            "port": 5000,
+            "risk": 3
+          },
+          {
+            "port": 8000,
+            "risk": 3
+          },
+          {
+            "port": 8443,
+            "risk": 3
+          },
+          {
+            "port": 135,
+            "risk": 1
+          },
+          {
+            "port": 445,
+            "risk": 1
+          },
+          {
+            "port": 7070,
+            "risk": 1
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-09T18:36:02+00:00",
+        "ports": [
+          {
+            "port": 3306,
+            "risk": 3
+          },
+          {
+            "port": 5000,
+            "risk": 3
+          },
+          {
+            "port": 5432,
+            "risk": 3
+          },
+          {
+            "port": 8000,
+            "risk": 3
+          },
+          {
+            "port": 8080,
+            "risk": 3
+          },
+          {
+            "port": 8443,
+            "risk": 3
+          },
+          {
+            "port": 135,
+            "risk": 1
+          },
+          {
+            "port": 445,
+            "risk": 1
+          },
+          {
+            "port": 7070,
+            "risk": 1
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-09T18:44:00+00:00",
+        "ports": [
+          {
+            "port": 5432,
+            "risk": 4,
+            "score": 8.67
+          },
+          {
+            "port": 8080,
+            "risk": 4,
+            "score": 8.67
+          },
+          {
+            "port": 8000,
+            "risk": 4,
+            "score": 8.27
+          },
+          {
+            "port": 5000,
+            "risk": 3,
+            "score": 7.88
+          },
+          {
+            "port": 445,
+            "risk": 1,
+            "score": 1.4
+          },
+          {
+            "port": 135,
+            "risk": 1,
+            "score": 1.0
+          },
+          {
+            "port": 7070,
+            "risk": 1,
+            "score": 1.0
+          },
+          {
+            "port": 8443,
+            "risk": 1,
+            "score": 1.0
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-09T18:47:53+00:00",
+        "ports": [
+          {
+            "port": 3306,
+            "risk": 4,
+            "score": 9.46
+          },
+          {
+            "port": 5432,
+            "risk": 4,
+            "score": 8.67
+          },
+          {
+            "port": 8080,
+            "risk": 4,
+            "score": 8.67
+          },
+          {
+            "port": 8000,
+            "risk": 4,
+            "score": 8.27
+          },
+          {
+            "port": 5000,
+            "risk": 3,
+            "score": 7.88
+          },
+          {
+            "port": 8443,
+            "risk": 3,
+            "score": 7.88
+          },
+          {
+            "port": 445,
+            "risk": 1,
+            "score": 1.4
+          },
+          {
+            "port": 135,
+            "risk": 1,
+            "score": 1.0
+          },
+          {
+            "port": 7070,
+            "risk": 1,
+            "score": 1.0
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-11T07:54:44+00:00",
+        "ports": [
+          {
+            "port": 5000,
+            "risk": 4,
+            "score": 8.0
+          },
+          {
+            "port": 445,
+            "risk": 1,
+            "score": 1.4
+          },
+          {
+            "port": 135,
+            "risk": 1,
+            "score": 1.0
+          },
+          {
+            "port": 7070,
+            "risk": 1,
+            "score": 1.0
+          }
+        ]
+      }
+    ]
+  },
+  "45.33.32.156": {
+    "favourite": false,
+    "scans": [
+      {
+        "timestamp": "2026-04-09T15:32:34+00:00",
+        "ports": [
+          {
+            "port": 22,
+            "risk": 3
+          },
+          {
+            "port": 80,
+            "risk": 3
+          },
+          {
+            "port": 9929,
+            "risk": 1
+          },
+          {
+            "port": 31337,
+            "risk": 1
+          }
+        ]
+      }
+    ]
+  },
+  "web.whatsapp.com": {
+    "favourite": false,
+    "scans": []
+  },
+  "8.8.8.8": {
+    "favourite": false,
+    "scans": [
+      {
+        "timestamp": "2026-04-09T15:41:02+00:00",
+        "ports": [
+          {
+            "port": 443,
+            "risk": 3
+          },
+          {
+            "port": 53,
+            "risk": 1
+          }
+        ]
+      }
+    ]
+  }
+}

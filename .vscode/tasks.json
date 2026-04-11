@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "HECTOR: Backend",
+      "type": "shell",
+      "command": "\"e:/USER PROFILE DO NOT DELETE DELL/Desktop/vuln_scanner/.venv/Scripts/python.exe\" app.py",
+      "options": {
+        "cwd": "e:/USER PROFILE DO NOT DELETE DELL/Desktop/vuln_scanner"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "HECTOR: Frontend",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$env:Path = 'C:\\Program Files\\nodejs;' + $env:Path; Set-Location 'e:/USER PROFILE DO NOT DELETE DELL/Desktop/vuln_scanner/frontend'; & 'C:\\Program Files\\nodejs\\npm.cmd' run dev -- --host 127.0.0.1"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start HECTOR Stack",
+      "dependsOn": [
+        "HECTOR: Backend",
+        "HECTOR: Frontend"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}
