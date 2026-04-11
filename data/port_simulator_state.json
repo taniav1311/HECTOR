@@ -1,12 +1,11 @@
 {
   "target": "127.0.0.1",
   "status": "running",
-  "updated_at": "2026-04-11T09:27:38+00:00",
+  "updated_at": "2026-04-11T09:28:25+00:00",
   "active_ports": [
     3306,
-    5432,
     8000,
-    8443
+    8080
   ],
   "available_ports": [
     8000,
@@ -21,7 +20,7 @@
   ],
   "last_event": {
     "action": "close",
-    "port": 8080,
-    "timestamp": "2026-04-11T09:27:38+00:00"
+    "port": 5432,
+    "timestamp": "2026-04-11T09:28:25+00:00"
   }
 }
