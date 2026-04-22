@@ -34,42 +34,61 @@ This approach ensures that the system:
 
 The system follows a modular pipeline:
 
-## ⚙️ System Architecture
-
-```mermaid
-flowchart LR
-    A[User Input: IP/Domain] --> B[Frontend (React)]
-    B --> C[Backend (Flask API)]
-    
-    C --> D[Scanner Module (Nmap)]
-    D --> E[Risk Analysis Engine]
-    
-    E --> F[Heuristics DB (JSON Rules)]
-    E --> G[CVE/NVD Integration]
-    
-    C --> H[Storage (History & Favourites)]
-    
-    E --> I[Results Dashboard]
-
 <img width="750" height="350" alt="image" src="https://github.com/user-attachments/assets/88a07cab-f7da-4994-b593-e5c50f518053" />
 
+---
 ---
 
 ## **Key Features**
 
 ### **1. Hybrid Risk Scoring Engine**
 
+* Weighted fusion of heuristic and CVSS scores
+* Port-sensitive risk adjustment
+* Deterministic and reproducible scoring logic
+
+---
+
 ### **2. Explainability by Design**
+
+Each finding exposes:
+
+* Heuristic contribution
+* CVSS contribution
+* Base score computation
+* Port weighting factor
+* Final risk score and severity classification
+
+This ensures the system remains **auditable and transparent**, rather than a black-box predictor.
+
+---
 
 ### **3. CVE Intelligence Integration**
 
+* Integration with **NVD data sources**
+* Service-to-vulnerability mapping
+* Contextual enrichment of scan findings
+
+---
+
 ### **4. Temporal Risk Tracking**
+
+* Persistent storage for selected hosts
+* Snapshot-based scan history
+* Visualization of **risk evolution over time**
+
+This extends the system from a one-time scanner to a **continuous assessment tool**.
+
+---
 
 ### **5. Robust and Practical Scanning**
 
-<img width="1918" height="971" alt="Screenshot 2026-04-11 132415" src="https://github.com/user-attachments/assets/f4b9683f-6f71-47ab-b8e7-2f3832bd1758" />
+* Nmap-based scanning with fallback strategies
+* Support for IPs, domains, and URLs
+* Input normalization to enforce safe, single-target scans
 
 ---
+ 
 
 ## **Technology Stack**
 
