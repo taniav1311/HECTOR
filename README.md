@@ -1,16 +1,22 @@
-
-
 # **HECTOR – Explainable Port Risk Assessment System**
 
-## **Overview**
+HECTOR is a cybersecurity tool that converts raw Nmap scan results into **prioritized, explainable risk insights**.
 
-HECTOR is a security analysis platform that transforms raw network scan results into a **prioritized, explainable risk assessment**.
-
-Conventional port scanners enumerate exposed services but provide limited guidance on remediation. HECTOR addresses this gap by integrating **scan data, vulnerability intelligence, and contextual scoring** into a unified decision framework.
+Unlike traditional scanners that only list open ports, HECTOR identifies:
+**what is risky, why it is risky, and what should be prioritized for remediation.**
 
 ---
 
-## **Technical Contribution**
+## Core Idea
+
+HECTOR uses a **hybrid risk scoring model** combining:
+
+* **Heuristic risk (H)** — domain knowledge of services
+* **CVSS score (C)** — real-time CVE data from NVD
+* **Port weight (W)** — contextual exposure relevance
+
+**Final Score = (0.4H + 0.6C) × W**
+(with fallback logic when data is unavailable)
 
 The primary contribution of this project is the design and implementation of an **explainable hybrid risk-scoring engine**.
 
@@ -29,7 +35,6 @@ This approach ensures that the system:
 * **Supports prioritization**, enabling efficient remediation decisions
 
 ---
-
 ## **System Architecture**
 
 The system follows a modular pipeline:
@@ -37,60 +42,70 @@ The system follows a modular pipeline:
 <img width="750" height="350" alt="image" src="https://github.com/user-attachments/assets/88a07cab-f7da-4994-b593-e5c50f518053" />
 
 ---
+
+## Output
+
+For each open port:
+
+* Risk score (0–10)
+* Severity (LOW → CRITICAL)
+* CVE mapping
+* Attack classification
+* Full scoring breakdown (transparent and auditable)
+
+<img width="1919" height="1033" alt="Screenshot 2026-04-30 120518" src="https://github.com/user-attachments/assets/dd3e641d-90f8-4809-8ef0-ea9cb0e8a2fb" />
+
+
+<img width="1902" height="968" alt="Screenshot 2026-04-30 121416" src="https://github.com/user-attachments/assets/971baca5-cf00-4339-a89d-169739a4edb0" />
+
+
+<img width="1917" height="1029" alt="Screenshot 2026-04-29 192953" src="https://github.com/user-attachments/assets/4ba302a6-f731-415e-a2c1-75afd096aee5" />
+
+
+<img width="1881" height="1035" alt="Screenshot 2026-04-29 193016" src="https://github.com/user-attachments/assets/ed08b6ba-0187-40ed-91ed-32c0a4740838" />
+
+
+<img width="1873" height="1029" alt="Screenshot 2026-04-29 193136" src="https://github.com/user-attachments/assets/e8536410-275a-4cf5-8d23-a5c5b6192b75" />
+
+
+<img width="1888" height="966" alt="Screenshot 2026-04-29 193408" src="https://github.com/user-attachments/assets/4efc5b6c-ab89-47b3-a8cb-fabb49ccfa74" />
+
+
 ---
 
-## **Key Features**
+## Key Features
 
-### **1. Hybrid Risk Scoring Engine**
+### Hybrid Risk Scoring
 
-* Weighted fusion of heuristic and CVSS scores
-* Port-sensitive risk adjustment
-* Deterministic and reproducible scoring logic
+* Combines heuristics, CVSS, and contextual weighting
+* Produces more realistic prioritization than single-source models
 
----
+### Explainability by Design
 
-### **2. Explainability by Design**
+* Complete visibility into scoring components
+* No black-box logic; fully reproducible results
 
-Each finding exposes:
+### CVE Intelligence Integration
 
-* Heuristic contribution
-* CVSS contribution
-* Base score computation
-* Port weighting factor
-* Final risk score and severity classification
-
-This ensures the system remains **auditable and transparent**, rather than a black-box predictor.
-
----
-
-### **3. CVE Intelligence Integration**
-
-* Integration with **NVD data sources**
+* Live NVD integration
 * Service-to-vulnerability mapping
 * Contextual enrichment of scan findings
 
----
+### Temporal Risk Tracking
 
-### **4. Temporal Risk Tracking**
-
-* Persistent storage for selected hosts
 * Snapshot-based scan history
-* Visualization of **risk evolution over time**
+* Tracks evolution of risk over time
 
-This extends the system from a one-time scanner to a **continuous assessment tool**.
+### Practical Scanning
 
----
-
-### **5. Robust and Practical Scanning**
-
-* Nmap-based scanning with fallback strategies
-* Support for IPs, domains, and URLs
-* Input normalization to enforce safe, single-target scans
+* Nmap-based scanning engine
+* Supports IPs, domains, and URLs
+* Input normalization with single-target enforcement
 
 ---
- 
 
-## **Technology Stack**
+## Technology Stack
+
 
 | Layer       | Technology        | Rationale                                       |
 | ----------- | ----------------- | ----------------------------------------------- |
@@ -103,34 +118,31 @@ This extends the system from a one-time scanner to a **continuous assessment too
 
 ---
 
-## **Novelty and Differentiation**
+## Differentiation
 
-HECTOR distinguishes itself in three key ways:
-
-1. **Hybrid Scoring Model**
-   Moves beyond single-source scoring by combining **local heuristics and external CVE intelligence**.
-
-2. **Explainable Risk Computation**
-   Every score is **fully decomposable**, enabling verification and trust.
-
-3. **Temporal Risk Perspective**
-   Introduces **time-based analysis of exposure**, which is typically absent in basic scanning tools.
+* Hybrid scoring model (heuristics + CVE + context)
+* Fully explainable risk computation
+* Temporal tracking of exposure
 
 ---
 
-## **Impact**
+## Impact
 
-HECTOR bridges the gap between **technical detection and operational decision-making**.
-
-* Converts scan outputs into **prioritized actions**
-* Reduces cognitive load in vulnerability analysis
-* Enables **repeatable and auditable security assessments**
-* Supports monitoring of **security posture over time**
+* Converts scan results into actionable priorities
+* Reduces manual analysis overhead
+* Enables consistent and auditable risk assessment
+* Supports continuous monitoring of security posture
 
 ---
 
-## **Conclusion**
+## Conclusion
 
-HECTOR is an **explainable vulnerability triage system** that integrates scanning, enrichment, and scoring into a coherent analytical pipeline.
+HECTOR is an explainable vulnerability triage system that integrates scanning, enrichment, and scoring into a single pipeline.
 
-Its primary value lies not in detecting exposure, but in **interpreting and prioritizing it with clarity and rigor**.
+Its value lies in interpreting and prioritizing exposure with clarity, context, and transparency.
+
+---
+
+## TL;DR
+
+HECTOR does not just detect vulnerabilities — it prioritizes and explains them.
